@@ -1,67 +1,210 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <head>
+    <!-- Importar Bootstrap y scripts de JavaScript -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css" />
 
-<body>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <div>
+    <body>
+      <meta charset="UTF-8" />
+      <meta name="viewport" />
+      <div>
+        <!-- Barra de Navegación -->
         <nav class="navbar navbar-light bg-light">
-            <span class="nabvar-brand mb-0 h1">Titulo</a>
-        </nav>
-    </div>
-    <div>
-        <div id="mycarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/placeholder-1-1920x1080.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/placeholder-2-1920x1080.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/placeholder-3-1920x1080.jpg" alt="Third slide">
-                </div>
+          <div class="container-fluid">
+            <div class="navbar-brand">
+              <img
+                src="img/cheese-200x200.png"
+                alt=""
+                width="64px"
+                height="64px"
+                class="d-inline-block align-text-center"
+              />
+              CLA
+              <span class="fs-6 fw-light">Cooperativa Lechera Araucanía</span>
             </div>
+            <div>
+              <!-- Enlaces de la Barra de Navegación -->
+              <a href="#">Acerca de Nosotros</a>
+              <a href="#">Productos</a>
+              <a href="#">Contacto</a>
+            </div>
+          </div>
+        </nav>
+      </div>
 
+      <!-- Carrusél con fotos representativas de la cooperativa -->
+      <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Botones de cada foto del carrusél -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="img/placeholder-5-1920x1080.jpg" class="card-img-top" alt="placeholder5">
+        <!-- Fotos del Carrusél junto con descripciones -->
+        <div class="carousel-inner">
+          <div class="carousel-item active home-carousel-item">
+            <img
+              src="img/Parque-Nacional-Huerquehue-799px.jpg"
+              class="d-block w-100 home-carousel-image"
+              alt="Parque Nacional Huerquehue con Volcán Villarrica en el fondo"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Del Sur de Chile</h1>
+              <p>Productos de la región de la Araucanía.</p>
+            </div>
+          </div>
+          <div class="carousel-item home-carousel-item">
+            <img
+              src="img/lacteos-1600x900.jpg"
+              class="d-block w-100 home-carousel-image"
+              alt="Productos Lacteos"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Variedad de Productos Lacteos</h1>
+              <p>Leches, quesos y yogures.</p>
+            </div>
+          </div>
+          <div class="carousel-item home-carousel-item">
+            <img
+              src="img/queso-1478x977.webp"
+              class="d-block w-100 home-carousel-image"
+              alt="Quesos"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Especialidad en Quesos</h1>
+              <p>La CLA se especializa en la producción de Quesos</p>
+            </div>
+          </div>
+        </div>
+        <!-- Flechas de navegación del Carrusél -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#home-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#home-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Tarjetas -->
+      <div class="container" id="product-catalog-cards">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="height: 100%">
+              <img
+                src="img/queso-1478x977.webp"
+                class="card-img-top"
+                alt="placeholder5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Quesos</h5>
+                <p class="card-text">Explora nuestra variedad de quesos</p>
+                <a href="#" class="btn btn-primary">Explorar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height: 100%">
+              <img
+                src="img/lacteos-1600x900.jpg"
+                class="card-img-top"
+                alt="placeholder5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lacteos</h5>
+                <p class="card-text">Explora nuestros productos lacteos</p>
+                <a href="#" class="btn btn-primary">Explorar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height: 100%">
+              <img
+                src="img/cheese-shop-1024x683.jpg"
+                class="card-img-top"
+                alt="placeholder5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Comprar</h5>
+                <p class="card-text">
+                  Encuentra nuestro productor en tu proveedor más cercano
+                </p>
+                <a href="#" class="btn btn-primary">Encontrar Proveedores</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Formulario de contacto dentro de una tarjeta -->
+      <div class="card" id="contact-form-card">
+        <div style="padding: 10px">
+          <h1>Contáctanos</h1>
+          <p>
+            ¿Eres un proveedor? Si es así, nos encantaría trabajar contigo,
+            llena este formulario con tus datos y te contactaremos a la
+            brevedad.
+          </p>
+        </div>
         <div class="card-body">
-            <h5 class="card-title">Titulo Tarjeta</h5>
-            <p class="card-text">Parrafo tarjeta</p>
-            <a href="#" class="btn btn-primary">Ir a alguna parte</a>
+          <form>
+            <div class="mb-3">
+              <label for="name-contact" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name-contact"
+                aria-describedby="nameHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email-contact" class="form-label"
+                >Correo Electronico</label
+              >
+              <input type="email" class="form-control" id="email-contact" />
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="img/placeholder-5-1920x1080.jpg" class="card-img-top" alt="placeholder5">
-        <div class="card-body">
-            <form>
-                <div class="mb-3">
-                    <label for="email-id-1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email-id-1" aria-describedby="emailHelp">
-                    <div class="mb-3">
-                        <label for="password-id-1" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password-id-1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="checkbox-id-1">
-                        <label class="form-check-label" class="checkbox-id-1">Recordar</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-            </form>
-        </div>
-    </div>
-</body>
-</head>
-
+      </div>
+    </body>
+  </head>
 </html>
